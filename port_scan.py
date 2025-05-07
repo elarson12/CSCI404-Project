@@ -1,5 +1,14 @@
 import socket
 
+
+def search_logfile(filename, keywords):
+    with open(filename, "r") as file:
+        for line in file:
+            for keyword in keywords:
+                if keyword in line:
+                    print(f"DETECTED '{keyword}'")
+
+
 def scan_port(host, port, timeout=1):
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     sock.settimeout(timeout)
@@ -14,8 +23,9 @@ def scan_port(host, port, timeout=1):
 
 def listen_on_port(port):
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    server_socket.bind(('0.0.0.0', port))  # Listen on all interfaces
-    server_socket.listen(1)  # Allow 1 connection in the queue
+    server_socket.bind(('0.0.0.0', port))
+    server_socket.listen(1) 
+    server_socket.settimeout(1)
     print(f"Listening on port {port}... (Ctrl+C to stop)")
 
     try:
@@ -25,7 +35,6 @@ def listen_on_port(port):
                 print(f"Connection from {addr[0]}:{addr[1]}")
                 client_socket.close()
             except socket.timeout:
-                # No connection received in timeout — loop again
                 continue
     except KeyboardInterrupt:
         print("\nStopped listening.")
@@ -34,10 +43,19 @@ def listen_on_port(port):
 
 
 #TEST
+
+#log file scan
+keywords = ["test", "127", "word"]
+filename = "logfile.txt"
+
+search_logfile(filename, keywords)
+
+#port scan
 host = "127.0.0.1" 
 ports_to_scan = [22, 80, 443, 8080]
 
 for port in ports_to_scan:
     scan_port(host, port)
 
+#listen to port
 listen_on_port(8080)
