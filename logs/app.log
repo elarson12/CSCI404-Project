@@ -1,0 +1,185 @@
+2025-05-11 21:07:09,090 - threat_analyzer - INFO - Starting threat analysis for 192.168.1.100 with scan ID: 192_168_1_100_20250511_210709
+2025-05-11 21:07:09,090 - threat_analyzer - INFO - Importing threat data...
+2025-05-11 21:07:09,091 - threat_analyzer.data_importer - INFO - Updating threat data from all sources
+2025-05-11 21:07:09,092 - threat_analyzer.data_importer - INFO - Updating threat data from API: National Vulnerability Database
+2025-05-11 21:07:09,342 - threat_analyzer.data_importer - ERROR - Failed to fetch data from National Vulnerability Database: HTTP 404
+2025-05-11 21:07:09,343 - threat_analyzer.data_importer - INFO - Updating threat data from download: Common Vulnerabilities and Exposures
+2025-05-11 21:07:09,346 - threat_analyzer.data_importer - INFO - Generated sample CVE data saved to data/threat_feeds/cve_database.json
+2025-05-11 21:07:09,346 - threat_analyzer.data_importer - INFO - Loading threat data from all sources
+2025-05-11 21:07:09,359 - threat_analyzer.data_importer - INFO - Loaded 18 threats from Common Vulnerabilities and Exposures
+2025-05-11 21:07:09,367 - threat_analyzer.data_importer - INFO - Loaded 0 threats from Local Threat Database
+2025-05-11 21:07:09,367 - threat_analyzer.data_importer - INFO - Loaded a total of 18 threats from all sources
+2025-05-11 21:07:09,367 - threat_analyzer - INFO - Loaded 18 threat records
+2025-05-11 21:07:09,367 - threat_analyzer - INFO - Collecting system information...
+2025-05-11 21:07:09,368 - threat_analyzer.system_info - INFO - Collecting system information
+2025-05-11 21:07:09,537 - threat_analyzer - INFO - Scanning ports for 192.168.1.100...
+2025-05-11 21:07:09,539 - threat_analyzer.port_scanner - WARNING - Nmap not available, falling back to socket scanner
+2025-05-11 21:07:09,540 - threat_analyzer.port_scanner - INFO - Starting port scan on 192.168.1.100
+2025-05-11 21:07:09,540 - threat_analyzer.port_scanner - INFO - Using socket-based port scanner
+2025-05-11 21:10:36,584 - threat_analyzer.port_scanner - INFO - Port scan completed in 207.04 seconds
+2025-05-11 21:10:36,584 - threat_analyzer - INFO - Found 0 open ports
+2025-05-11 21:10:36,585 - threat_analyzer - INFO - Detecting services on open ports...
+2025-05-11 21:10:36,585 - threat_analyzer.service_detector - INFO - Detecting services on 0 open ports
+2025-05-11 21:10:36,587 - threat_analyzer - INFO - Saved scan results to data/scan_results/192_168_1_100_20250511_210709_scan.json
+2025-05-11 21:10:36,588 - threat_analyzer - INFO - Identifying potential threats...
+2025-05-11 21:10:36,589 - threat_analyzer.threat_matcher - INFO - Matching threats with scan results
+2025-05-11 21:10:36,589 - threat_analyzer.threat_matcher - INFO - Matched 0 threats with confidence >= 0.65
+2025-05-11 21:10:36,589 - threat_analyzer - INFO - Identified 0 potential threats
+2025-05-11 21:10:36,590 - threat_analyzer - INFO - Assessing risk levels...
+2025-05-11 21:10:36,590 - threat_analyzer.risk_assessor - INFO - Assessing risks for 0 identified threats
+2025-05-11 21:10:36,590 - threat_analyzer - INFO - Analyzing potential impact...
+2025-05-11 21:10:36,591 - threat_analyzer.impact_analyzer - INFO - Analyzing impact for 0 threats
+2025-05-11 21:10:36,591 - threat_analyzer - INFO - Generating threat characterization report...
+2025-05-11 21:10:36,592 - threat_analyzer.report_generator - INFO - Generating markdown report
+2025-05-11 21:10:36,593 - threat_analyzer.report_generator - INFO - Report saved to data/reports/192_168_1_100_20250511_210709_report.md
+2025-05-11 21:10:36,594 - threat_analyzer - INFO - Report generated and saved to data/reports/192_168_1_100_20250511_210709_report.md
+2025-05-11 21:18:51,735 - threat_analyzer - INFO - Starting threat analysis for 192.168.1.100 with scan ID: 192_168_1_100_20250511_211851
+2025-05-11 21:18:51,735 - threat_analyzer - INFO - Importing threat data...
+2025-05-11 21:18:51,736 - threat_analyzer.data_importer - INFO - Updating threat data from all sources
+2025-05-11 21:18:51,737 - threat_analyzer.data_importer - INFO - Updating threat data from API: National Vulnerability Database
+2025-05-11 21:18:51,997 - threat_analyzer.data_importer - ERROR - Failed to fetch data from National Vulnerability Database: HTTP 404
+2025-05-11 21:18:51,997 - threat_analyzer.data_importer - INFO - Updating threat data from download: Common Vulnerabilities and Exposures
+2025-05-11 21:18:51,999 - threat_analyzer.data_importer - INFO - Generated sample CVE data saved to data/threat_feeds/cve_database.json
+2025-05-11 21:18:51,999 - threat_analyzer.data_importer - INFO - Loading threat data from all sources
+2025-05-11 21:18:52,001 - threat_analyzer.data_importer - INFO - Loaded 18 threats from Common Vulnerabilities and Exposures
+2025-05-11 21:18:52,001 - threat_analyzer.data_importer - INFO - Loaded 0 threats from Local Threat Database
+2025-05-11 21:18:52,001 - threat_analyzer.data_importer - INFO - Loaded a total of 18 threats from all sources
+2025-05-11 21:18:52,001 - threat_analyzer - INFO - Loaded 18 threat records
+2025-05-11 21:18:52,002 - threat_analyzer - INFO - Collecting system information...
+2025-05-11 21:18:52,002 - threat_analyzer.system_info - INFO - Collecting system information
+2025-05-11 21:18:52,202 - threat_analyzer - INFO - Scanning ports for 192.168.1.100...
+2025-05-11 21:18:52,205 - threat_analyzer.port_scanner - WARNING - Nmap not available, falling back to socket scanner
+2025-05-11 21:18:52,205 - threat_analyzer.port_scanner - INFO - Starting port scan on 192.168.1.100
+2025-05-11 21:18:52,205 - threat_analyzer.port_scanner - INFO - Using socket-based port scanner
+2025-05-11 21:22:19,265 - threat_analyzer.port_scanner - INFO - Port scan completed in 207.06 seconds
+2025-05-11 21:22:19,266 - threat_analyzer - INFO - Found 0 open ports
+2025-05-11 21:22:19,266 - threat_analyzer - INFO - Detecting services on open ports...
+2025-05-11 21:22:19,266 - threat_analyzer.service_detector - INFO - Detecting services on 0 open ports
+2025-05-11 21:22:19,268 - threat_analyzer - INFO - Saved scan results to data/scan_results/192_168_1_100_20250511_211851_scan.json
+2025-05-11 21:22:19,268 - threat_analyzer - INFO - Identifying potential threats...
+2025-05-11 21:22:19,269 - threat_analyzer.threat_matcher - INFO - Matching threats with scan results
+2025-05-11 21:22:19,269 - threat_analyzer.threat_matcher - INFO - Matched 0 threats with confidence >= 0.65
+2025-05-11 21:22:19,269 - threat_analyzer - INFO - Identified 0 potential threats
+2025-05-11 21:22:19,270 - threat_analyzer - INFO - Assessing risk levels...
+2025-05-11 21:22:19,270 - threat_analyzer.risk_assessor - INFO - Assessing risks for 0 identified threats
+2025-05-11 21:22:19,270 - threat_analyzer - INFO - Analyzing potential impact...
+2025-05-11 21:22:19,271 - threat_analyzer.impact_analyzer - INFO - Analyzing impact for 0 threats
+2025-05-11 21:22:19,271 - threat_analyzer - INFO - Generating threat characterization report...
+2025-05-11 21:22:19,272 - threat_analyzer.report_generator - INFO - Generating markdown report
+2025-05-11 21:22:19,274 - threat_analyzer.report_generator - INFO - Report saved to data/reports/192_168_1_100_20250511_211851_report.md
+2025-05-11 21:22:19,275 - threat_analyzer - INFO - Report generated and saved to data/reports/192_168_1_100_20250511_211851_report.md
+2025-05-12 00:04:59,149 - threat_analyzer - INFO - Starting threat analysis for 192.168.1.100 with scan ID: 192_168_1_100_20250512_000459
+2025-05-12 00:04:59,150 - threat_analyzer - INFO - Importing threat data...
+2025-05-12 00:04:59,150 - threat_analyzer.data_importer - INFO - Updating threat data from all sources
+2025-05-12 00:04:59,150 - threat_analyzer.data_importer - INFO - Updating threat data from API: National Vulnerability Database
+2025-05-12 00:04:59,474 - threat_analyzer.data_importer - ERROR - Failed to fetch data from National Vulnerability Database: HTTP 404
+2025-05-12 00:04:59,475 - threat_analyzer.data_importer - INFO - Updating threat data from download: Common Vulnerabilities and Exposures
+2025-05-12 00:04:59,478 - threat_analyzer.data_importer - INFO - Generated sample CVE data saved to data/threat_feeds/cve_database.json
+2025-05-12 00:04:59,478 - threat_analyzer.data_importer - INFO - Loading threat data from all sources
+2025-05-12 00:04:59,479 - threat_analyzer.data_importer - INFO - Loaded 18 threats from Common Vulnerabilities and Exposures
+2025-05-12 00:04:59,480 - threat_analyzer.data_importer - INFO - Loaded 0 threats from Local Threat Database
+2025-05-12 00:04:59,480 - threat_analyzer.data_importer - INFO - Loaded a total of 18 threats from all sources
+2025-05-12 00:04:59,480 - threat_analyzer - INFO - Loaded 18 threat records
+2025-05-12 00:04:59,480 - threat_analyzer - INFO - Collecting system information...
+2025-05-12 00:04:59,480 - threat_analyzer.system_info - INFO - Collecting system information
+2025-05-12 00:04:59,649 - threat_analyzer - INFO - Scanning ports for 192.168.1.100...
+2025-05-12 00:04:59,680 - threat_analyzer.port_scanner - INFO - Nmap scanner initialized
+2025-05-12 00:04:59,680 - threat_analyzer.port_scanner - INFO - Starting port scan on 192.168.1.100
+2025-05-12 00:04:59,681 - threat_analyzer.port_scanner - INFO - Using nmap-based port scanner
+2025-05-12 00:05:06,191 - threat_analyzer.port_scanner - INFO - Port scan completed in 6.51 seconds
+2025-05-12 00:05:06,191 - threat_analyzer - INFO - Found 0 open ports
+2025-05-12 00:05:06,191 - threat_analyzer - INFO - Detecting services on open ports...
+2025-05-12 00:05:06,192 - threat_analyzer.service_detector - INFO - Detecting services on 0 open ports
+2025-05-12 00:05:06,193 - threat_analyzer - INFO - Saved scan results to data/scan_results/192_168_1_100_20250512_000459_scan.json
+2025-05-12 00:05:06,193 - threat_analyzer - INFO - Identifying potential threats...
+2025-05-12 00:05:06,193 - threat_analyzer.threat_matcher - INFO - Matching threats with scan results
+2025-05-12 00:05:06,193 - threat_analyzer.threat_matcher - INFO - Matched 0 threats with confidence >= 0.65
+2025-05-12 00:05:06,193 - threat_analyzer - INFO - Identified 0 potential threats
+2025-05-12 00:05:06,194 - threat_analyzer - INFO - Assessing risk levels...
+2025-05-12 00:05:06,194 - threat_analyzer.risk_assessor - INFO - Assessing risks for 0 identified threats
+2025-05-12 00:05:06,194 - threat_analyzer - INFO - Analyzing potential impact...
+2025-05-12 00:05:06,194 - threat_analyzer.impact_analyzer - INFO - Analyzing impact for 0 threats
+2025-05-12 00:05:06,195 - threat_analyzer - INFO - Generating threat characterization report...
+2025-05-12 00:05:06,196 - threat_analyzer.report_generator - INFO - Generating markdown report
+2025-05-12 00:05:06,198 - threat_analyzer.report_generator - INFO - Report saved to data/reports/192_168_1_100_20250512_000459_report.md
+2025-05-12 00:05:06,198 - threat_analyzer - INFO - Report generated and saved to data/reports/192_168_1_100_20250512_000459_report.md
+2025-05-12 00:41:23,766 - threat_analyzer - INFO - Starting threat analysis for 45.33.32.156 with scan ID: 45_33_32_156_20250512_004123
+2025-05-12 00:41:23,767 - threat_analyzer - INFO - Importing threat data...
+2025-05-12 00:41:23,767 - threat_analyzer.data_importer - INFO - Loading threat data from all sources
+2025-05-12 00:41:23,769 - threat_analyzer.data_importer - INFO - Loaded 18 threats from Common Vulnerabilities and Exposures
+2025-05-12 00:41:23,770 - threat_analyzer.data_importer - INFO - Loaded 0 threats from Local Threat Database
+2025-05-12 00:41:23,772 - threat_analyzer.data_importer - INFO - Loaded a total of 18 threats from all sources
+2025-05-12 00:41:23,772 - threat_analyzer - INFO - Loaded 18 threat records
+2025-05-12 00:41:23,773 - threat_analyzer - INFO - Collecting system information...
+2025-05-12 00:41:23,773 - threat_analyzer.system_info - INFO - Collecting system information
+2025-05-12 00:41:23,967 - threat_analyzer - INFO - Scanning ports for 45.33.32.156...
+2025-05-12 00:41:24,004 - threat_analyzer.port_scanner - INFO - Nmap scanner initialized
+2025-05-12 00:41:24,004 - threat_analyzer.port_scanner - INFO - Starting port scan on 45.33.32.156
+2025-05-12 00:41:24,005 - threat_analyzer.port_scanner - INFO - Using nmap-based port scanner
+2025-05-12 00:41:24,363 - threat_analyzer.port_scanner - ERROR - Nmap scan failed: [WinError 206] The filename or extension is too long
+2025-05-12 00:41:24,363 - threat_analyzer.port_scanner - INFO - Falling back to socket-based scanner
+2025-05-12 00:41:24,364 - threat_analyzer.port_scanner - INFO - Using socket-based port scanner
+2025-05-12 00:48:04,310 - threat_analyzer - INFO - Starting threat analysis for 45.33.32.156 with scan ID: 45_33_32_156_20250512_004804
+2025-05-12 00:48:04,310 - threat_analyzer - INFO - Importing threat data...
+2025-05-12 00:48:04,310 - threat_analyzer.data_importer - INFO - Loading threat data from all sources
+2025-05-12 00:48:04,310 - threat_analyzer.data_importer - INFO - Loaded 18 threats from Common Vulnerabilities and Exposures
+2025-05-12 00:48:04,311 - threat_analyzer.data_importer - INFO - Loaded 0 threats from Local Threat Database
+2025-05-12 00:48:04,311 - threat_analyzer.data_importer - INFO - Loaded a total of 18 threats from all sources
+2025-05-12 00:48:04,311 - threat_analyzer - INFO - Loaded 18 threat records
+2025-05-12 00:48:04,311 - threat_analyzer - INFO - Collecting system information...
+2025-05-12 00:48:04,311 - threat_analyzer.system_info - INFO - Collecting system information
+2025-05-12 00:48:04,458 - threat_analyzer - INFO - Scanning ports for 45.33.32.156...
+2025-05-12 00:48:04,490 - threat_analyzer.port_scanner - INFO - Nmap scanner initialized
+2025-05-12 00:48:04,491 - threat_analyzer.port_scanner - INFO - Starting port scan on 45.33.32.156
+2025-05-12 00:48:04,491 - threat_analyzer.port_scanner - INFO - Using nmap-based port scanner
+2025-05-12 00:48:11,753 - threat_analyzer.port_scanner - INFO - Port scan completed in 7.26 seconds
+2025-05-12 00:48:11,753 - threat_analyzer - INFO - Found 4 open ports
+2025-05-12 00:48:11,753 - threat_analyzer - INFO - Detecting services on open ports...
+2025-05-12 00:48:11,753 - threat_analyzer.service_detector - INFO - Detecting services on 4 open ports
+2025-05-12 00:48:11,882 - threat_analyzer.service_detector - INFO - Detected service ssh on port 22
+2025-05-12 00:48:12,004 - threat_analyzer.service_detector - INFO - Detected service http on port 80
+2025-05-12 00:48:13,216 - threat_analyzer - INFO - Saved scan results to data/scan_results/45_33_32_156_20250512_004804_scan.json
+2025-05-12 00:48:13,217 - threat_analyzer - INFO - Identifying potential threats...
+2025-05-12 00:48:13,217 - threat_analyzer.threat_matcher - INFO - Matching threats with scan results
+2025-05-12 00:48:13,217 - threat_analyzer.threat_matcher - INFO - Matched 0 threats with confidence >= 0.65
+2025-05-12 00:48:13,218 - threat_analyzer - INFO - Identified 0 potential threats
+2025-05-12 00:48:13,218 - threat_analyzer - INFO - Assessing risk levels...
+2025-05-12 00:48:13,218 - threat_analyzer.risk_assessor - INFO - Assessing risks for 0 identified threats
+2025-05-12 00:48:13,218 - threat_analyzer - INFO - Analyzing potential impact...
+2025-05-12 00:48:13,218 - threat_analyzer.impact_analyzer - INFO - Analyzing impact for 0 threats
+2025-05-12 00:48:13,218 - threat_analyzer - INFO - Generating threat characterization report...
+2025-05-12 00:48:13,219 - threat_analyzer.report_generator - INFO - Generating markdown report
+2025-05-12 00:48:13,221 - threat_analyzer.report_generator - INFO - Report saved to data/reports/45_33_32_156_20250512_004804_report.md
+2025-05-12 00:48:13,221 - threat_analyzer - INFO - Report generated and saved to data/reports/45_33_32_156_20250512_004804_report.md
+2025-05-12 00:55:59,664 - threat_analyzer - INFO - Starting threat analysis for 45.33.32.156 with scan ID: 45_33_32_156_20250512_005559
+2025-05-12 00:55:59,665 - threat_analyzer - INFO - Importing threat data...
+2025-05-12 00:55:59,665 - threat_analyzer.data_importer - INFO - Loading threat data from all sources
+2025-05-12 00:55:59,666 - threat_analyzer.data_importer - INFO - Loaded 18 threats from Common Vulnerabilities and Exposures
+2025-05-12 00:55:59,667 - threat_analyzer.data_importer - INFO - Loaded 0 threats from Local Threat Database
+2025-05-12 00:55:59,667 - threat_analyzer.data_importer - INFO - Loaded a total of 18 threats from all sources
+2025-05-12 00:55:59,667 - threat_analyzer - INFO - Loaded 18 threat records
+2025-05-12 00:55:59,667 - threat_analyzer - INFO - Collecting system information...
+2025-05-12 00:55:59,667 - threat_analyzer.system_info - INFO - Collecting system information
+2025-05-12 00:55:59,859 - threat_analyzer - INFO - Scanning ports for 45.33.32.156...
+2025-05-12 00:55:59,902 - threat_analyzer.port_scanner - INFO - Nmap scanner initialized
+2025-05-12 00:55:59,902 - threat_analyzer.port_scanner - INFO - Starting port scan on 45.33.32.156
+2025-05-12 00:55:59,903 - threat_analyzer.port_scanner - INFO - Using nmap-based port scanner
+2025-05-12 00:56:07,476 - threat_analyzer.port_scanner - INFO - Port scan completed in 7.57 seconds
+2025-05-12 00:56:07,476 - threat_analyzer - INFO - Found 4 open ports
+2025-05-12 00:56:07,477 - threat_analyzer - INFO - Detecting services on open ports...
+2025-05-12 00:56:07,477 - threat_analyzer.service_detector - INFO - Detecting services on 4 open ports
+2025-05-12 00:56:07,610 - threat_analyzer.service_detector - INFO - Detected service ssh on port 22
+2025-05-12 00:56:07,744 - threat_analyzer.service_detector - INFO - Detected service http on port 80
+2025-05-12 00:56:08,393 - threat_analyzer - INFO - Saved scan results to data/scan_results/45_33_32_156_20250512_005559_scan.json
+2025-05-12 00:56:08,400 - threat_analyzer - INFO - Identifying potential threats...
+2025-05-12 00:56:08,402 - threat_analyzer.threat_matcher - INFO - Matching threats with scan results
+2025-05-12 00:56:08,404 - threat_analyzer.threat_matcher - INFO - Matched 0 threats with confidence >= 0.65
+2025-05-12 00:56:08,404 - threat_analyzer - INFO - Identified 0 potential threats
+2025-05-12 00:56:08,405 - threat_analyzer - INFO - Assessing risk levels...
+2025-05-12 00:56:08,405 - threat_analyzer.risk_assessor - INFO - Assessing risks for 0 identified threats
+2025-05-12 00:56:08,405 - threat_analyzer - INFO - Analyzing potential impact...
+2025-05-12 00:56:08,406 - threat_analyzer.impact_analyzer - INFO - Analyzing impact for 0 threats
+2025-05-12 00:56:08,406 - threat_analyzer - INFO - Generating threat characterization report...
+2025-05-12 00:56:08,407 - threat_analyzer.report_generator - INFO - Generating markdown report
+2025-05-12 00:56:08,408 - threat_analyzer.report_generator - INFO - Report saved to data/reports/45_33_32_156_20250512_005559_report.md
+2025-05-12 00:56:08,412 - threat_analyzer - INFO - Report generated and saved to data/reports/45_33_32_156_20250512_005559_report.md

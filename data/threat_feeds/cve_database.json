@@ -1,0 +1,302 @@
+{
+  "vulnerabilities": [
+    {
+      "id": "CVE-2023-12345",
+      "name": "Apache Log4j Remote Code Execution Vulnerability",
+      "description": "Remote code execution vulnerability in Apache Log4j.",
+      "severity": "CRITICAL",
+      "affected_systems": [
+        "Apache Log4j 2.0-2.14.1"
+      ],
+      "affected_ports": [
+        8080,
+        443
+      ],
+      "detection_patterns": [
+        "jndi:ldap",
+        "JndiLookup.class"
+      ],
+      "remediation": "Update to Log4j 2.15.0 or higher"
+    },
+    {
+      "id": "CVE-2023-23456",
+      "name": "OpenSSH Authentication Bypass",
+      "description": "Authentication bypass vulnerability in OpenSSH.",
+      "severity": "HIGH",
+      "affected_systems": [
+        "OpenSSH 8.x before 8.9"
+      ],
+      "affected_ports": [
+        22
+      ],
+      "detection_patterns": [
+        "OpenSSH_8"
+      ],
+      "remediation": "Update to OpenSSH 8.9 or higher"
+    },
+    {
+      "id": "CVE-2023-34567",
+      "name": "MySQL Server SQL Injection",
+      "description": "SQL injection vulnerability in MySQL Server.",
+      "severity": "HIGH",
+      "affected_systems": [
+        "MySQL 8.0.x before 8.0.32"
+      ],
+      "affected_ports": [
+        3306
+      ],
+      "detection_patterns": [
+        "MySQL 8.0"
+      ],
+      "remediation": "Update to MySQL 8.0.32 or higher"
+    },
+    {
+      "id": "CVE-2023-45678",
+      "name": "Nginx HTTP/2 Denial of Service",
+      "description": "Denial of service vulnerability in Nginx HTTP/2 implementation.",
+      "severity": "MEDIUM",
+      "affected_systems": [
+        "Nginx 1.20.x before 1.20.2"
+      ],
+      "affected_ports": [
+        80,
+        443
+      ],
+      "detection_patterns": [
+        "nginx/1.20"
+      ],
+      "remediation": "Update to Nginx 1.20.2 or higher"
+    },
+    {
+      "id": "CVE-2023-56789",
+      "name": "Redis Command Injection",
+      "description": "Command injection vulnerability in Redis.",
+      "severity": "CRITICAL",
+      "affected_systems": [
+        "Redis 6.x before 6.2.7"
+      ],
+      "affected_ports": [
+        6379
+      ],
+      "detection_patterns": [
+        "Redis 6."
+      ],
+      "remediation": "Update to Redis 6.2.7 or higher"
+    },
+    {
+      "id": "CVE-2023-http",
+      "name": "HTTP Vulnerability",
+      "description": "Sample vulnerability affecting HTTP services.",
+      "severity": "MEDIUM",
+      "affected_systems": [
+        "HTTP Server"
+      ],
+      "affected_ports": [
+        80,
+        8080,
+        8000,
+        8888
+      ],
+      "detection_patterns": [
+        "http"
+      ],
+      "remediation": "Update HTTP to latest version"
+    },
+    {
+      "id": "CVE-2023-https",
+      "name": "HTTPS Vulnerability",
+      "description": "Sample vulnerability affecting HTTPS services.",
+      "severity": "MEDIUM",
+      "affected_systems": [
+        "HTTPS Server"
+      ],
+      "affected_ports": [
+        443,
+        8443
+      ],
+      "detection_patterns": [
+        "https"
+      ],
+      "remediation": "Update HTTPS to latest version"
+    },
+    {
+      "id": "CVE-2023-ftp",
+      "name": "FTP Vulnerability",
+      "description": "Sample vulnerability affecting FTP services.",
+      "severity": "MEDIUM",
+      "affected_systems": [
+        "FTP Server"
+      ],
+      "affected_ports": [
+        20,
+        21
+      ],
+      "detection_patterns": [
+        "ftp"
+      ],
+      "remediation": "Update FTP to latest version"
+    },
+    {
+      "id": "CVE-2023-ssh",
+      "name": "SSH Vulnerability",
+      "description": "Sample vulnerability affecting SSH services.",
+      "severity": "MEDIUM",
+      "affected_systems": [
+        "SSH Server"
+      ],
+      "affected_ports": [
+        22
+      ],
+      "detection_patterns": [
+        "ssh"
+      ],
+      "remediation": "Update SSH to latest version"
+    },
+    {
+      "id": "CVE-2023-telnet",
+      "name": "Telnet Vulnerability",
+      "description": "Sample vulnerability affecting Telnet services.",
+      "severity": "MEDIUM",
+      "affected_systems": [
+        "Telnet Server"
+      ],
+      "affected_ports": [
+        23
+      ],
+      "detection_patterns": [
+        "telnet"
+      ],
+      "remediation": "Update Telnet to latest version"
+    },
+    {
+      "id": "CVE-2023-smtp",
+      "name": "SMTP Vulnerability",
+      "description": "Sample vulnerability affecting SMTP services.",
+      "severity": "MEDIUM",
+      "affected_systems": [
+        "SMTP Server"
+      ],
+      "affected_ports": [
+        25,
+        587
+      ],
+      "detection_patterns": [
+        "smtp"
+      ],
+      "remediation": "Update SMTP to latest version"
+    },
+    {
+      "id": "CVE-2023-dns",
+      "name": "DNS Vulnerability",
+      "description": "Sample vulnerability affecting DNS services.",
+      "severity": "MEDIUM",
+      "affected_systems": [
+        "DNS Server"
+      ],
+      "affected_ports": [
+        53
+      ],
+      "detection_patterns": [
+        "dns"
+      ],
+      "remediation": "Update DNS to latest version"
+    },
+    {
+      "id": "CVE-2023-smb",
+      "name": "SMB Vulnerability",
+      "description": "Sample vulnerability affecting SMB services.",
+      "severity": "MEDIUM",
+      "affected_systems": [
+        "SMB Server"
+      ],
+      "affected_ports": [
+        139,
+        445
+      ],
+      "detection_patterns": [
+        "smb"
+      ],
+      "remediation": "Update SMB to latest version"
+    },
+    {
+      "id": "CVE-2023-rdp",
+      "name": "RDP Vulnerability",
+      "description": "Sample vulnerability affecting RDP services.",
+      "severity": "MEDIUM",
+      "affected_systems": [
+        "RDP Server"
+      ],
+      "affected_ports": [
+        3389
+      ],
+      "detection_patterns": [
+        "rdp"
+      ],
+      "remediation": "Update RDP to latest version"
+    },
+    {
+      "id": "CVE-2023-mysql",
+      "name": "MySQL Vulnerability",
+      "description": "Sample vulnerability affecting MySQL services.",
+      "severity": "MEDIUM",
+      "affected_systems": [
+        "MySQL Server"
+      ],
+      "affected_ports": [
+        3306
+      ],
+      "detection_patterns": [
+        "mysql"
+      ],
+      "remediation": "Update MySQL to latest version"
+    },
+    {
+      "id": "CVE-2023-postgresql",
+      "name": "PostgreSQL Vulnerability",
+      "description": "Sample vulnerability affecting PostgreSQL services.",
+      "severity": "MEDIUM",
+      "affected_systems": [
+        "PostgreSQL Server"
+      ],
+      "affected_ports": [
+        5432
+      ],
+      "detection_patterns": [
+        "postgresql"
+      ],
+      "remediation": "Update PostgreSQL to latest version"
+    },
+    {
+      "id": "CVE-2023-redis",
+      "name": "Redis Vulnerability",
+      "description": "Sample vulnerability affecting Redis services.",
+      "severity": "MEDIUM",
+      "affected_systems": [
+        "Redis Server"
+      ],
+      "affected_ports": [
+        6379
+      ],
+      "detection_patterns": [
+        "redis"
+      ],
+      "remediation": "Update Redis to latest version"
+    },
+    {
+      "id": "CVE-2023-mongodb",
+      "name": "MongoDB Vulnerability",
+      "description": "Sample vulnerability affecting MongoDB services.",
+      "severity": "MEDIUM",
+      "affected_systems": [
+        "MongoDB Server"
+      ],
+      "affected_ports": [
+        27017
+      ],
+      "detection_patterns": [
+        "mongodb"
+      ],
+      "remediation": "Update MongoDB to latest version"
+    }
+  ]
+}

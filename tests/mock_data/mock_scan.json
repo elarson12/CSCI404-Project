@@ -1,0 +1,84 @@
+{
+    "target": "192.168.1.100",
+    "ports_scanned": 1024,
+    "scan_time": 5.42,
+    "timestamp": "2025-05-11T08:30:45.123456",
+    "open_ports": [
+        {
+            "port": 22,
+            "state": "open",
+            "service": "ssh"
+        },
+        {
+            "port": 80,
+            "state": "open",
+            "service": "http"
+        },
+        {
+            "port": 443,
+            "state": "open",
+            "service": "https"
+        },
+        {
+            "port": 3306,
+            "state": "open",
+            "service": "mysql"
+        },
+        {
+            "port": 8080,
+            "state": "open",
+            "service": "http-alt"
+        }
+    ],
+    "closed_ports": 1019,
+    "services": [
+        {
+            "port": 22,
+            "service": "ssh",
+            "version": "OpenSSH 8.2p1",
+            "banner": "SSH-2.0-OpenSSH_8.2p1 Ubuntu-4ubuntu0.3"
+        },
+        {
+            "port": 80,
+            "service": "http",
+            "version": "Apache 2.4.41",
+            "banner": "HTTP/1.1 200 OK\r\nServer: Apache/2.4.41 (Ubuntu)\r\nContent-Type: text/html\r\n"
+        },
+        {
+            "port": 443,
+            "service": "https",
+            "version": "Apache 2.4.41",
+            "banner": ""
+        },
+        {
+            "port": 3306,
+            "service": "mysql",
+            "version": "MySQL 8.0.25",
+            "banner": "5.7.0-mysql_native_password"
+        },
+        {
+            "port": 8080,
+            "service": "http",
+            "version": "Apache Tomcat 9.0.45",
+            "banner": "HTTP/1.1 200 OK\r\nServer: Apache-Coyote/1.1\r\nContent-Type: text/html\r\n"
+        }
+    ],
+    "system_info": {
+        "hostname": "test-server",
+        "os": {
+            "name": "Linux",
+            "version": "5.4.0-100-generic",
+            "distribution": "Ubuntu 20.04.4 LTS"
+        },
+        "network": {
+            "default_ip": "192.168.1.10",
+            "interfaces": [
+                {
+                    "name": "eth0",
+                    "ip": "192.168.1.10",
+                    "mac": "00:11:22:33:44:55"
+                }
+            ]
+        }
+    }
+}

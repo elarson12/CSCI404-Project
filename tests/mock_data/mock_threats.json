@@ -1,0 +1,194 @@
+{
+    "vulnerabilities": [
+        {
+            "id": "CVE-2021-44228",
+            "name": "Log4j Remote Code Execution Vulnerability",
+            "description": "A critical vulnerability in Apache Log4j allows attackers to execute arbitrary code by sending specially crafted requests. The vulnerability is due to JNDI features used in configuration, log messages, and parameters that do not protect against attacker-controlled LDAP and other JNDI related endpoints.",
+            "severity": "CRITICAL",
+            "affected_systems": [
+                "Apache Log4j 2.0-2.14.1"
+            ],
+            "affected_ports": [
+                80,
+                443,
+                8080,
+                8443
+            ],
+            "detection_patterns": [
+                "log4j",
+                "jndi:ldap",
+                "JndiLookup.class"
+            ],
+            "remediation": "Update to Log4j 2.15.0 or higher, or remove the JndiLookup class from the classpath."
+        },
+        {
+            "id": "CVE-2022-22965",
+            "name": "Spring Framework RCE Vulnerability",
+            "description": "A Spring MVC or Spring WebFlux application running on JDK 9+ may be vulnerable to remote code execution (RCE) via data binding. The specific exploit requires the application to run on Tomcat as a WAR deployment.",
+            "severity": "HIGH",
+            "affected_systems": [
+                "Spring Framework 5.3.0-5.3.17",
+                "Spring Framework 5.2.0-5.2.19",
+                "older versions"
+            ],
+            "affected_ports": [
+                8080,
+                8443,
+                80,
+                443
+            ],
+            "detection_patterns": [
+                "spring",
+                "spring-framework",
+                "spring-boot"
+            ],
+            "remediation": "Update to Spring Framework 5.3.18+ or 5.2.20+ depending on your version."
+        },
+        {
+            "id": "CVE-2020-14145",
+            "name": "OpenSSH Client Information Disclosure",
+            "description": "The OpenSSH client since version 5.7 and before 8.4 provides a mechanism to detect whether a server has been changed since the last connection. This may leak information about the last server connected to.",
+            "severity": "MEDIUM",
+            "affected_systems": [
+                "OpenSSH 5.7-8.3p1"
+            ],
+            "affected_ports": [
+                22
+            ],
+            "detection_patterns": [
+                "OpenSSH_5",
+                "OpenSSH_6",
+                "OpenSSH_7",
+                "OpenSSH_8.0",
+                "OpenSSH_8.1",
+                "OpenSSH_8.2",
+                "OpenSSH_8.3"
+            ],
+            "remediation": "Update to OpenSSH 8.4p1 or higher."
+        },
+        {
+            "id": "CVE-2021-3156",
+            "name": "Sudo Heap-Based Buffer Overflow",
+            "description": "A heap-based buffer overflow in Sudo exists when an attacker with access to a Sudo user account executes sudoedit with command-line arguments ending in a single backslash character.",
+            "severity": "CRITICAL",
+            "affected_systems": [
+                "Sudo before 1.9.5p2"
+            ],
+            "affected_ports": [],
+            "detection_patterns": [
+                "sudo"
+            ],
+            "remediation": "Update to Sudo 1.9.5p2 or higher."
+        },
+        {
+            "id": "CVE-2022-33099",
+            "name": "MySQL Information Disclosure",
+            "description": "MySQL Server is vulnerable to information disclosure. Successful exploitation requires authentication and can result in unauthorized access to sensitive information.",
+            "severity": "MEDIUM",
+            "affected_systems": [
+                "MySQL 8.0.0-8.0.26"
+            ],
+            "affected_ports": [
+                3306
+            ],
+            "detection_patterns": [
+                "MySQL 8.0"
+            ],
+            "remediation": "Update to MySQL 8.0.28 or higher."
+        },
+        {
+            "id": "CVE-2022-22719",
+            "name": "Apache HTTP Server Denial of Service",
+            "description": "A carefully crafted request body can cause a denial of service in the Apache HTTP Server. This issue affects Apache HTTP Server 2.4.52 and earlier.",
+            "severity": "HIGH",
+            "affected_systems": [
+                "Apache HTTP Server 2.4.0-2.4.52"
+            ],
+            "affected_ports": [
+                80,
+                443
+            ],
+            "detection_patterns": [
+                "Apache/2.4"
+            ],
+            "remediation": "Update to Apache HTTP Server 2.4.53 or higher."
+        },
+        {
+            "id": "CVE-2022-0778",
+            "name": "OpenSSL Infinite Loop Vulnerability",
+            "description": "The BN_mod_sqrt() function may be called with a non-prime modulus, which can lead to an infinite loop, causing a denial of service.",
+            "severity": "HIGH",
+            "affected_systems": [
+                "OpenSSL 1.0.2-1.0.2zc",
+                "OpenSSL 1.1.1-1.1.1m",
+                "OpenSSL 3.0.0-3.0.1"
+            ],
+            "affected_ports": [
+                443,
+                8443
+            ],
+            "detection_patterns": [
+                "OpenSSL"
+            ],
+            "remediation": "Update to OpenSSL 1.0.2zd, 1.1.1n, or 3.0.2 or higher depending on your version."
+        },
+        {
+            "id": "CVE-2021-42013",
+            "name": "Apache HTTP Server Path Traversal",
+            "description": "A path traversal attack vulnerability in Apache HTTP Server can allow an attacker to map URLs to files outside the directories configured by Alias-like directives.",
+            "severity": "CRITICAL",
+            "affected_systems": [
+                "Apache HTTP Server 2.4.49-2.4.50"
+            ],
+            "affected_ports": [
+                80,
+                443
+            ],
+            "detection_patterns": [
+                "Apache/2.4.49",
+                "Apache/2.4.50"
+            ],
+            "remediation": "Update to Apache HTTP Server 2.4.51 or higher."
+        },
+        {
+            "id": "CVE-2022-1292",
+            "name": "OpenSSL Command Injection",
+            "description": "The c_rehash script in OpenSSL is vulnerable to command injection. This vulnerability allows an attacker to execute arbitrary commands with the privileges of the process running the OpenSSL application.",
+            "severity": "HIGH",
+            "affected_systems": [
+                "OpenSSL 1.0.2-1.0.2zd",
+                "OpenSSL 1.1.1-1.1.1o",
+                "OpenSSL 3.0.0-3.0.2"
+            ],
+            "affected_ports": [
+                443,
+                8443
+            ],
+            "detection_patterns": [
+                "OpenSSL"
+            ],
+            "remediation": "Update to OpenSSL 1.0.2ze, 1.1.1p, or 3.0.3 or higher depending on your version."
+        },
+        {
+            "id": "CVE-2022-1388",
+            "name": "F5 BIG-IP Authentication Bypass",
+            "description": "The BIG-IP iControl REST API has a vulnerability that allows unauthenticated attackers with network access to the BIG-IP system through the management port to bypass authentication and execute commands.",
+            "severity": "CRITICAL",
+            "affected_systems": [
+                "F5 BIG-IP 16.1.0-16.1.2",
+                "F5 BIG-IP 15.1.0-15.1.5",
+                "F5 BIG-IP 14.1.0-14.1.4",
+                "F5 BIG-IP 13.1.0-13.1.4"
+            ],
+            "affected_ports": [
+                443,
+                8443
+            ],
+            "detection_patterns": [
+                "BIG-IP",
+                "F5"
+            ],
+            "remediation": "Update to the latest version of F5 BIG-IP for your branch."
+        }
+    ]
+}

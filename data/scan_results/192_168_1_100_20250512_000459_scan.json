@@ -1,0 +1,9 @@
+{
+  "open_ports": [],
+  "closed_ports": 1024,
+  "target": "192.168.1.100",
+  "ports_scanned": 1024,
+  "scan_time": 6.510484933853149,
+  "timestamp": "2025-05-12T00:05:06.190590",
+  "services": []
+}

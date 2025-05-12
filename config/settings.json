@@ -1,0 +1,39 @@
+{
+    "app": {
+        "name": "Cyberattack Threat Characterization System",
+        "version": "0.1.0",
+        "log_level": "INFO",
+        "log_file": "logs/app.log"
+    },
+    "scanner": {
+        "default_timeout": 2,
+        "default_port_range": [
+            1,
+            1024
+        ],
+        "service_detection": true,
+        "threads": 10
+    },
+    "threat_identification": {
+        "confidence_threshold": 0.65,
+        "threat_data_update_frequency_days": 7
+    },
+    "threat_characterization": {
+        "risk_levels": [
+            "LOW",
+            "MEDIUM",
+            "HIGH",
+            "CRITICAL"
+        ],
+        "impact_factors": {
+            "data_breach": 0.8,
+            "service_disruption": 0.6,
+            "credential_theft": 0.7,
+            "remote_code_execution": 0.9
+        }
+    },
+    "report": {
+        "format": "markdown",
+        "save_location": "data/reports/"
+    }
+}

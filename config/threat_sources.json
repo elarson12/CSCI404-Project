@@ -1,0 +1,126 @@
+{
+    "sources": [
+        {
+            "name": "National Vulnerability Database",
+            "url": "https://services.nvd.nist.gov/rest/json/cves/2.0",
+            "type": "api",
+            "format": "json",
+            "parameters": {
+                "resultsPerPage": 2000,
+                "pubStartDate": "2023-01-01T00:00:00.000",
+                "pubEndDate": "2023-12-31T23:59:59.999"
+            },
+            "headers": {},
+            "authentication": false
+        },
+        {
+            "name": "Common Vulnerabilities and Exposures",
+            "url": "https://cve.mitre.org/data/downloads/index.html",
+            "type": "download",
+            "format": "json",
+            "file": "data/threat_feeds/cve_database.json"
+        },
+        {
+            "name": "Local Threat Database",
+            "type": "local",
+            "format": "json",
+            "file": "data/threat_feeds/local_threats.json"
+        }
+    ],
+    "keywords": [
+        "remote code execution",
+        "sql injection",
+        "cross site scripting",
+        "buffer overflow",
+        "denial of service",
+        "privilege escalation",
+        "information disclosure"
+    ],
+    "common_vulnerable_services": [
+        {
+            "name": "HTTP",
+            "ports": [
+                80,
+                8080,
+                8000,
+                8888
+            ]
+        },
+        {
+            "name": "HTTPS",
+            "ports": [
+                443,
+                8443
+            ]
+        },
+        {
+            "name": "FTP",
+            "ports": [
+                20,
+                21
+            ]
+        },
+        {
+            "name": "SSH",
+            "ports": [
+                22
+            ]
+        },
+        {
+            "name": "Telnet",
+            "ports": [
+                23
+            ]
+        },
+        {
+            "name": "SMTP",
+            "ports": [
+                25,
+                587
+            ]
+        },
+        {
+            "name": "DNS",
+            "ports": [
+                53
+            ]
+        },
+        {
+            "name": "SMB",
+            "ports": [
+                139,
+                445
+            ]
+        },
+        {
+            "name": "RDP",
+            "ports": [
+                3389
+            ]
+        },
+        {
+            "name": "MySQL",
+            "ports": [
+                3306
+            ]
+        },
+        {
+            "name": "PostgreSQL",
+            "ports": [
+                5432
+            ]
+        },
+        {
+            "name": "Redis",
+            "ports": [
+                6379
+            ]
+        },
+        {
+            "name": "MongoDB",
+            "ports": [
+                27017
+            ]
+        }
+    ]
+}
