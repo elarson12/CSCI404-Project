@@ -1,25 +1,30 @@
 import socket
+import logging
 
 
-def search_logfile(filename, keywords):
-    with open(filename, "r") as file:
-        for line in file:
-            for keyword in keywords:
-                if keyword in line:
-                    print(f"DETECTED '{keyword}'")
+#example of a blacklisted IP address 
+keywords = ["172.25.202.169", "172.25.222.231"] 
 
+#proof of concept for a database that stores recorded threats for a IP address
+keyword_info = {
+    "172.25.222.231": {
+        "TYPE": "DDOS",
+        "DATE_LISTED": "2025-01-01",
+        "LEVEL": "HIGH"
+    },
+    "172.25.202.169": {
+        "TYPE": "SCAM",
+        "DATE_LISTED": "2024-12-01",
+        "LEVEL": "LOW"
+    }
+}
 
-def scan_port(host, port, timeout=1):
-    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    sock.settimeout(timeout)
-    
-    try:
-        sock.connect((host, port))
-        print(f"Port {port} is OPEN on {host}")
-    except (socket.timeout, socket.error):
-        print(f"Port {port} is CLOSED on {host}")
-    finally:
-        sock.close()
+#log warnings
+logging.basicConfig(filename = "warnings.txt",
+                    format="%(asctime)s %(message)s",
+                    filemode="w")
+log_warning = logging.getLogger()
+log_warning.setLevel(logging.WARNING)
 
 def listen_on_port(port):
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -33,6 +38,18 @@ def listen_on_port(port):
             try:
                 client_socket, addr = server_socket.accept()
                 print(f"Connection from {addr[0]}:{addr[1]}")
+                check_ip = addr[0]
+                check_port = addr[1]
+
+                if check_ip in keywords:
+                    print(f"WARNING: Blacklisted IP {check_ip} attempted to connect. Check warnings.txt")
+                    #list recorded threat data from IP
+
+                    print(check_ip, ":", keyword_info[check_ip])
+                    #record connection to log
+                    log_warning.warning(f"Blacklisted IP {check_ip}:{check_port} attempted to connect.")
+                
+
                 client_socket.close()
             except socket.timeout:
                 continue
@@ -44,18 +61,5 @@ def listen_on_port(port):
 
 #TEST
 
-#log file scan
-keywords = ["test", "127", "word"]
-filename = "logfile.txt"
-
-search_logfile(filename, keywords)
-
-#port scan
-host = "127.0.0.1" 
-ports_to_scan = [22, 80, 443, 8080]
-
-for port in ports_to_scan:
-    scan_port(host, port)
-
-#listen to port
+#listen to port and check against keywords for blacklisted IP address
 listen_on_port(8080)
